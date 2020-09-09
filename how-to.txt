@@ -1,0 +1,8 @@
+docker build --tag app:latest .
+
+docker run app:latest
+
+#running interractive after comenting out last couple lines:
+docker run -it --entrypoint /bin/bash app:latest
+#one more level of interactivity
+python

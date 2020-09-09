@@ -1,0 +1,235 @@
+Sending build context to Docker daemon  170.5kB
+Step 1/8 : FROM python:3.8-slim-buster
+ ---> 38cd21c9e1a8
+Step 2/8 : RUN mkdir /app
+ ---> Using cache
+ ---> 69e568010af4
+Step 3/8 : WORKDIR /app
+ ---> Using cache
+ ---> 9ad54557b7ad
+Step 4/8 : COPY requirements.txt /app/
+ ---> Using cache
+ ---> a68a89714381
+Step 5/8 : RUN pip install --no-cache-dir -r requirements.txt
+ ---> Running in 664eaf5757bd
+Collecting txtai==1.0.0
+  Downloading txtai-1.0.0-py3-none-any.whl (17 kB)
+Collecting numpy
+  Downloading numpy-1.19.1-cp38-cp38-manylinux2010_x86_64.whl (14.5 MB)
+Collecting pandas==1.0.5
+  Downloading pandas-1.0.5-cp38-cp38-manylinux1_x86_64.whl (10.0 MB)
+Collecting tqdm>=4.46.0
+  Downloading tqdm-4.48.2-py2.py3-none-any.whl (68 kB)
+Collecting regex>=2020.5.14
+  Downloading regex-2020.7.14-cp38-cp38-manylinux2010_x86_64.whl (672 kB)
+Collecting nltk>=3.5
+  Downloading nltk-3.5.zip (1.4 MB)
+Collecting scikit-learn>=0.23.1
+  Downloading scikit_learn-0.23.2-cp38-cp38-manylinux1_x86_64.whl (6.8 MB)
+Collecting transformers>=3.0.2
+  Downloading transformers-3.1.0-py3-none-any.whl (884 kB)
+Collecting fasttext>=0.9.2
+  Downloading fasttext-0.9.2.tar.gz (68 kB)
+Collecting sentence-transformers>=0.3.3
+  Downloading sentence-transformers-0.3.5.1.tar.gz (61 kB)
+Collecting faiss-gpu>=1.6.3
+  Downloading faiss_gpu-1.6.3-cp38-cp38-manylinux2010_x86_64.whl (35.5 MB)
+Collecting torch>=1.4.0
+  Downloading torch-1.6.0-cp38-cp38-manylinux1_x86_64.whl (748.8 MB)
+Collecting pymagnitude-lite>=0.1.43
+  Downloading pymagnitude_lite-0.1.143-py3-none-any.whl (34 kB)
+Collecting python-dateutil>=2.6.1
+  Downloading python_dateutil-2.8.1-py2.py3-none-any.whl (227 kB)
+Collecting pytz>=2017.2
+  Downloading pytz-2020.1-py2.py3-none-any.whl (510 kB)
+Collecting click
+  Downloading click-7.1.2-py2.py3-none-any.whl (82 kB)
+Collecting joblib
+  Downloading joblib-0.16.0-py3-none-any.whl (300 kB)
+Collecting scipy>=0.19.1
+  Downloading scipy-1.5.2-cp38-cp38-manylinux1_x86_64.whl (25.7 MB)
+Collecting threadpoolctl>=2.0.0
+  Downloading threadpoolctl-2.1.0-py3-none-any.whl (12 kB)
+Collecting sentencepiece!=0.1.92
+  Downloading sentencepiece-0.1.91-cp38-cp38-manylinux1_x86_64.whl (1.1 MB)
+Collecting filelock
+  Downloading filelock-3.0.12-py3-none-any.whl (7.6 kB)
+Collecting packaging
+  Downloading packaging-20.4-py2.py3-none-any.whl (37 kB)
+Collecting tokenizers==0.8.1.rc2
+  Downloading tokenizers-0.8.1rc2-cp38-cp38-manylinux1_x86_64.whl (3.0 MB)
+Collecting sacremoses
+  Downloading sacremoses-0.0.43.tar.gz (883 kB)
+Collecting requests
+  Downloading requests-2.24.0-py2.py3-none-any.whl (61 kB)
+Requirement already satisfied: pybind11>=2.2 in /usr/local/lib/python3.8/site-packages (from fasttext>=0.9.2->txtai==1.0.0->-r requirements.txt (line 1)) (2.5.0)
+Requirement already satisfied: setuptools>=0.7.0 in /usr/local/lib/python3.8/site-packages (from fasttext>=0.9.2->txtai==1.0.0->-r requirements.txt (line 1)) (49.3.1)
+Collecting future
+  Downloading future-0.18.2.tar.gz (829 kB)
+Collecting xxhash>=1.0.1
+  Downloading xxhash-2.0.0-cp38-cp38-manylinux2010_x86_64.whl (243 kB)
+Collecting lz4>=1.0.0
+  Downloading lz4-3.1.0-cp38-cp38-manylinux2010_x86_64.whl (1.8 MB)
+Collecting fasteners>=0.14.1
+  Downloading fasteners-0.15-py2.py3-none-any.whl (23 kB)
+Collecting six>=1.5
+  Downloading six-1.15.0-py2.py3-none-any.whl (10 kB)
+Collecting pyparsing>=2.0.2
+  Downloading pyparsing-2.4.7-py2.py3-none-any.whl (67 kB)
+Collecting urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1
+  Downloading urllib3-1.25.10-py2.py3-none-any.whl (127 kB)
+Collecting certifi>=2017.4.17
+  Downloading certifi-2020.6.20-py2.py3-none-any.whl (156 kB)
+Collecting chardet<4,>=3.0.2
+  Downloading chardet-3.0.4-py2.py3-none-any.whl (133 kB)
+Collecting idna<3,>=2.5
+  Downloading idna-2.10-py2.py3-none-any.whl (58 kB)
+Collecting monotonic>=0.1
+  Downloading monotonic-1.5-py2.py3-none-any.whl (5.3 kB)
+Building wheels for collected packages: nltk, fasttext, sentence-transformers, sacremoses, future
+  Building wheel for nltk (setup.py): started
+  Building wheel for nltk (setup.py): finished with status 'done'
+  Created wheel for nltk: filename=nltk-3.5-py3-none-any.whl size=1434676 sha256=14eed7aa64972979428f1fefeee2395a85c22bfd40923eca881b1c1faad39a80
+  Stored in directory: /tmp/pip-ephem-wheel-cache-_xzhnpf3/wheels/ff/d5/7b/f1fb4e1e1603b2f01c2424dd60fbcc50c12ef918bafc44b155
+  Building wheel for fasttext (setup.py): started
+  Building wheel for fasttext (setup.py): finished with status 'error'
+  ERROR: Command errored out with exit status 1:
+   command: /usr/local/bin/python -u -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-5bmksi1p/fasttext/setup.py'"'"'; __file__='"'"'/tmp/pip-install-5bmksi1p/fasttext/setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' bdist_wheel -d /tmp/pip-wheel-uk90dci5
+       cwd: /tmp/pip-install-5bmksi1p/fasttext/
+  Complete output (54 lines):
+  running bdist_wheel
+  running build
+  running build_py
+  creating build
+  creating build/lib.linux-x86_64-3.8
+  creating build/lib.linux-x86_64-3.8/fasttext
+  copying python/fasttext_module/fasttext/FastText.py -> build/lib.linux-x86_64-3.8/fasttext
+  copying python/fasttext_module/fasttext/__init__.py -> build/lib.linux-x86_64-3.8/fasttext
+  creating build/lib.linux-x86_64-3.8/fasttext/util
+  copying python/fasttext_module/fasttext/util/util.py -> build/lib.linux-x86_64-3.8/fasttext/util
+  copying python/fasttext_module/fasttext/util/__init__.py -> build/lib.linux-x86_64-3.8/fasttext/util
+  creating build/lib.linux-x86_64-3.8/fasttext/tests
+  copying python/fasttext_module/fasttext/tests/test_script.py -> build/lib.linux-x86_64-3.8/fasttext/tests
+  copying python/fasttext_module/fasttext/tests/test_configurations.py -> build/lib.linux-x86_64-3.8/fasttext/tests
+  copying python/fasttext_module/fasttext/tests/__init__.py -> build/lib.linux-x86_64-3.8/fasttext/tests
+  running build_ext
+  creating tmp
+  gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -I/usr/local/include/python3.8 -c /tmp/tmpmjd_2d6f.cpp -o tmp/tmpmjd_2d6f.o -std=c++14
+  unable to execute 'gcc': No such file or directory
+  gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -I/usr/local/include/python3.8 -c /tmp/tmpoe2o2yfd.cpp -o tmp/tmpoe2o2yfd.o -std=c++11
+  unable to execute 'gcc': No such file or directory
+  Traceback (most recent call last):
+    File "<string>", line 1, in <module>
+    File "/tmp/pip-install-5bmksi1p/fasttext/setup.py", line 168, in <module>
+      setup(
+    File "/usr/local/lib/python3.8/site-packages/setuptools/__init__.py", line 163, in setup
+      return distutils.core.setup(**attrs)
+    File "/usr/local/lib/python3.8/distutils/core.py", line 148, in setup
+      dist.run_commands()
+    File "/usr/local/lib/python3.8/distutils/dist.py", line 966, in run_commands
+      self.run_command(cmd)
+    File "/usr/local/lib/python3.8/distutils/dist.py", line 985, in run_command
+      cmd_obj.run()
+    File "/usr/local/lib/python3.8/site-packages/wheel/bdist_wheel.py", line 223, in run
+      self.run_command('build')
+    File "/usr/local/lib/python3.8/distutils/cmd.py", line 313, in run_command
+      self.distribution.run_command(command)
+    File "/usr/local/lib/python3.8/distutils/dist.py", line 985, in run_command
+      cmd_obj.run()
+    File "/usr/local/lib/python3.8/distutils/command/build.py", line 135, in run
+      self.run_command(cmd_name)
+    File "/usr/local/lib/python3.8/distutils/cmd.py", line 313, in run_command
+      self.distribution.run_command(command)
+    File "/usr/local/lib/python3.8/distutils/dist.py", line 985, in run_command
+      cmd_obj.run()
+    File "/usr/local/lib/python3.8/site-packages/setuptools/command/build_ext.py", line 87, in run
+      _build_ext.run(self)
+    File "/usr/local/lib/python3.8/distutils/command/build_ext.py", line 340, in run
+      self.build_extensions()
+    File "/tmp/pip-install-5bmksi1p/fasttext/setup.py", line 146, in build_extensions
+      opts.append(cpp_flag(self.compiler))
+    File "/tmp/pip-install-5bmksi1p/fasttext/setup.py", line 108, in cpp_flag
+      raise RuntimeError(
+  RuntimeError: Unsupported compiler -- at least C++11 support is needed!
+  ----------------------------------------
+  ERROR: Failed building wheel for fasttext
+  Running setup.py clean for fasttext
+  Building wheel for sentence-transformers (setup.py): started
+  Building wheel for sentence-transformers (setup.py): finished with status 'done'
+  Created wheel for sentence-transformers: filename=sentence_transformers-0.3.5.1-py3-none-any.whl size=100385 sha256=4e5b7c0c4737bce72c9ca448e99105e1607ef55f1b52cb443c021306c3e7d5b6
+  Stored in directory: /tmp/pip-ephem-wheel-cache-_xzhnpf3/wheels/66/ae/67/258739c2114baf8eafb49a1da71acef40c107ca85a0bdcce17
+  Building wheel for sacremoses (setup.py): started
+  Building wheel for sacremoses (setup.py): finished with status 'done'
+  Created wheel for sacremoses: filename=sacremoses-0.0.43-py3-none-any.whl size=893259 sha256=0aec3ef4d243075fd9b29dea2907606451405d206db3d1acfec00692e5eb97b8
+  Stored in directory: /tmp/pip-ephem-wheel-cache-_xzhnpf3/wheels/7b/78/f4/27d43a65043e1b75dbddaa421b573eddc67e712be4b1c80677
+  Building wheel for future (setup.py): started
+  Building wheel for future (setup.py): finished with status 'done'
+  Created wheel for future: filename=future-0.18.2-py3-none-any.whl size=491058 sha256=f51b7308d846f806e1d14ecb80c241ff0fa2bf8846ae97d302bb16b8f920fc77
+  Stored in directory: /tmp/pip-ephem-wheel-cache-_xzhnpf3/wheels/8e/70/28/3d6ccd6e315f65f245da085482a2e1c7d14b90b30f239e2cf4
+Successfully built nltk sentence-transformers sacremoses future
+Failed to build fasttext
+DEPRECATION: Could not build wheels for fasttext which do not use PEP 517. pip will fall back to legacy 'setup.py install' for these. pip 21.0 will remove support for this functionality. A possible replacement is to fix the wheel build issue reported above. You can find discussion regarding this at https://github.com/pypa/pip/issues/8368.
+Installing collected packages: tqdm, regex, click, joblib, nltk, numpy, scipy, threadpoolctl, scikit-learn, sentencepiece, filelock, six, pyparsing, packaging, tokenizers, sacremoses, urllib3, certifi, chardet, idna, requests, transformers, fasttext, future, torch, sentence-transformers, faiss-gpu, xxhash, lz4, monotonic, fasteners, pymagnitude-lite, txtai, python-dateutil, pytz, pandas
+    Running setup.py install for fasttext: started
+    Running setup.py install for fasttext: finished with status 'error'
+    ERROR: Command errored out with exit status 1:
+     command: /usr/local/bin/python -u -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-5bmksi1p/fasttext/setup.py'"'"'; __file__='"'"'/tmp/pip-install-5bmksi1p/fasttext/setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' install --record /tmp/pip-record-x642pyyk/install-record.txt --single-version-externally-managed --compile --install-headers /usr/local/include/python3.8/fasttext
+         cwd: /tmp/pip-install-5bmksi1p/fasttext/
+    Complete output (55 lines):
+    running install
+    running build
+    running build_py
+    creating build
+    creating build/lib.linux-x86_64-3.8
+    creating build/lib.linux-x86_64-3.8/fasttext
+    copying python/fasttext_module/fasttext/FastText.py -> build/lib.linux-x86_64-3.8/fasttext
+    copying python/fasttext_module/fasttext/__init__.py -> build/lib.linux-x86_64-3.8/fasttext
+    creating build/lib.linux-x86_64-3.8/fasttext/util
+    copying python/fasttext_module/fasttext/util/util.py -> build/lib.linux-x86_64-3.8/fasttext/util
+    copying python/fasttext_module/fasttext/util/__init__.py -> build/lib.linux-x86_64-3.8/fasttext/util
+    creating build/lib.linux-x86_64-3.8/fasttext/tests
+    copying python/fasttext_module/fasttext/tests/test_script.py -> build/lib.linux-x86_64-3.8/fasttext/tests
+    copying python/fasttext_module/fasttext/tests/test_configurations.py -> build/lib.linux-x86_64-3.8/fasttext/tests
+    copying python/fasttext_module/fasttext/tests/__init__.py -> build/lib.linux-x86_64-3.8/fasttext/tests
+    running build_ext
+    gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -I/usr/local/include/python3.8 -c /tmp/tmpg6lsnh22.cpp -o tmp/tmpg6lsnh22.o -std=c++14
+    unable to execute 'gcc': No such file or directory
+    gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -I/usr/local/include/python3.8 -c /tmp/tmp86e89rkf.cpp -o tmp/tmp86e89rkf.o -std=c++11
+    unable to execute 'gcc': No such file or directory
+    Traceback (most recent call last):
+      File "<string>", line 1, in <module>
+      File "/tmp/pip-install-5bmksi1p/fasttext/setup.py", line 168, in <module>
+        setup(
+      File "/usr/local/lib/python3.8/site-packages/setuptools/__init__.py", line 163, in setup
+        return distutils.core.setup(**attrs)
+      File "/usr/local/lib/python3.8/distutils/core.py", line 148, in setup
+        dist.run_commands()
+      File "/usr/local/lib/python3.8/distutils/dist.py", line 966, in run_commands
+        self.run_command(cmd)
+      File "/usr/local/lib/python3.8/distutils/dist.py", line 985, in run_command
+        cmd_obj.run()
+      File "/usr/local/lib/python3.8/site-packages/setuptools/command/install.py", line 61, in run
+        return orig.install.run(self)
+      File "/usr/local/lib/python3.8/distutils/command/install.py", line 545, in run
+        self.run_command('build')
+      File "/usr/local/lib/python3.8/distutils/cmd.py", line 313, in run_command
+        self.distribution.run_command(command)
+      File "/usr/local/lib/python3.8/distutils/dist.py", line 985, in run_command
+        cmd_obj.run()
+      File "/usr/local/lib/python3.8/distutils/command/build.py", line 135, in run
+        self.run_command(cmd_name)
+      File "/usr/local/lib/python3.8/distutils/cmd.py", line 313, in run_command
+        self.distribution.run_command(command)
+      File "/usr/local/lib/python3.8/distutils/dist.py", line 985, in run_command
+        cmd_obj.run()
+      File "/usr/local/lib/python3.8/site-packages/setuptools/command/build_ext.py", line 87, in run
+        _build_ext.run(self)
+      File "/usr/local/lib/python3.8/distutils/command/build_ext.py", line 340, in run
+        self.build_extensions()
+      File "/tmp/pip-install-5bmksi1p/fasttext/setup.py", line 146, in build_extensions
+        opts.append(cpp_flag(self.compiler))
+      File "/tmp/pip-install-5bmksi1p/fasttext/setup.py", line 108, in cpp_flag
+        raise RuntimeError(
+    RuntimeError: Unsupported compiler -- at least C++11 support is needed!
+    ----------------------------------------
+ERROR: Command errored out with exit status 1: /usr/local/bin/python -u -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-5bmksi1p/fasttext/setup.py'"'"'; __file__='"'"'/tmp/pip-install-5bmksi1p/fasttext/setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' install --record /tmp/pip-record-x642pyyk/install-record.txt --single-version-externally-managed --compile --install-headers /usr/local/include/python3.8/fasttext Check the logs for full command output.
